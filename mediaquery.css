@@ -284,10 +284,17 @@
 
 /* Tablet */
 
+@media (max-width: 2400) {
+  .scroll-explore {
+    top: 75%;
+    left: 80%;
+  }
+}
+
 @media (max-width: 1440px) {
   .scroll-explore {
     top: 75%;
-    left: 85%;
+    left: 90%;
     width: 120px;
     height: 120px;
   }

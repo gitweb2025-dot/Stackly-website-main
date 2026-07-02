@@ -84,7 +84,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   width: 100%;
-  max-width: 2400px;
+  max-width: 2000px;
   min-width: 320px;
   margin: auto;
   min-height: 100vh;
@@ -424,7 +424,7 @@ body {
 .scroll-explore {
   position: fixed;
   top: 80%;
-  left: 90%;
+  left: 85%;
   width: 140px;
   height: 140px;
   z-index: 1000;
