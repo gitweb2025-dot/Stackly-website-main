@@ -84,7 +84,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   width: 100%;
-  max-width: 1400px;
+  max-width: 2400px;
   min-width: 320px;
   margin: auto;
   min-height: 100vh;
