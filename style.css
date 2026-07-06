@@ -1122,113 +1122,193 @@ body {
 }
 
 /* Careers / Showcase Page Styles */
+/* =========================
+   PINNED EXPERTISE
+========================= */
+
 .pinned-expertise {
-  height: 400vh; /* Controls scroll duration */
-  background: #f9fafb;
+    position: relative;
+    background: #f9fafb;
 }
 
 .pin-wrapper {
-  position: sticky;
-  top: 0;
-height: 100vh;
-  overflow: hidden;
-  padding: 6rem 4rem 0 4rem;
-  display: flex;
-  /* flex-direction: column; */
+    position: sticky;
+    top: 0;
+    height: 100vh;
 
-  /* justify-content: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  justify-content: center;
-  gap: 40px;
-  overflow: hidden;
-}
+    gap: 60px;
 
-.pin-header {
-  margin-bottom: 3rem;
-  width: 40%;
+    padding: 0 clamp(2rem,5vw,5rem);
+
+    overflow: hidden;
 }
 
-.pin-header h1 {
-  font-size: 3rem;
-  color: #000;
+.pin-header{
+    width:42%;
 }
 
-/* Cards container */
-.pin-cards {
-  position: relative;
-  height: 400px;
-  width: 50%;
-}
-#first {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
-
-  border-radius: 30px;
-}
-#second {
-  background: linear-gradient(135deg, #11998e, #38ef7d);
-
-  border-radius: 30px;
-}
-#third {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-
-  border-radius: 30px;
-}
-#fourth {
-  background: linear-gradient(135deg, #8360c3, #2ebf91);
-
-  border-radius: 30px;
-}
-/* Card base */
-.pin-card {
-  position: absolute;
-  inset: 0;
-  /* background: rgb(204, 45, 45); */
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: all 0.6s ease;
+.pin-header h1{
+    font-size:clamp(2.5rem,4vw,4rem);
+    line-height:1.2;
+    color: #000;
 }
 
-/* Active card */
-.pin-card.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  z-index: 2;
-}
-.num {
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 50%;
-  color: #000;
-}
-/* Previous card */
-.pin-card.prev {
-  opacity: 0.4;
-  transform: scale(0.9);
-  z-index: 1;
+.pin-cards{
+
+    position:relative;
+
+    width:52%;
+
+    height:520px;
+
 }
 
-.pin-card span {
-  color: #000000;
-  font-weight: 600;
+.pin-card{
+
+    position:absolute;
+    inset:0;
+
+    border-radius:30px;
+
+    padding:3rem;
+
+    opacity:0;
+
+    transform:translateY(60px) scale(.95);
+
+    transition:.55s ease;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
 }
 
-.pin-card h2 {
-  font-size: 33px;
-  margin: 1rem 0;
-  color: #ffffff;
+.pin-card.active{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+    z-index:5;
+
 }
 
-.pin-card p {
-  color: #000000;
-  max-width: 500px;
-  line-height: 1.6;
-  font-size: 24px;
+.pin-card.prev{
+
+    opacity:.25;
+
+    transform:scale(.93);
+
+    z-index:2;
+
 }
 
+.pin-card:nth-child(1){
+
+    background:linear-gradient(135deg,#4e54c8,#8f94fb);
+
+}
+
+.pin-card:nth-child(2){
+
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+
+}
+
+.pin-card:nth-child(3){
+
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+
+}
+
+.pin-card:nth-child(4){
+
+    background:linear-gradient(135deg,#8360c3,#2ebf91);
+
+}
+
+.num{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+.pin-card h2{
+
+    margin:25px 0 20px;
+
+    color:#fff;
+
+    font-size:2rem;
+
+}
+
+.pin-card p{
+
+    color:rgba(255,255,255,.9);
+
+    line-height:1.7;
+
+    font-size:1.15rem;
+
+}
+
+@media(max-width:1024px){
+
+.pin-wrapper{
+
+    position:relative;
+
+    height:auto;
+
+    flex-direction:column;
+
+    padding:4rem 2rem;
+
+}
+
+.pin-header,
+.pin-cards{
+
+    width:100%;
+
+}
+
+.pin-cards{
+
+    height:auto;
+
+}
+
+.pin-card{
+
+    position:relative;
+
+    opacity:1;
+
+    transform:none;
+
+    margin-bottom:2rem;
+
+}
+
+}
 /* ===========================
    PARTNERS SECTION – FULL WIDTH
    =========================== */
@@ -1964,7 +2044,7 @@ height: 100vh;
 /* ================= HERO BASE ================= */
 .hero-section1 {
   position: relative;
-  min-height: fit-content;
+  min-height: 100vh;
   width: 100%;
 
   background: #000;
