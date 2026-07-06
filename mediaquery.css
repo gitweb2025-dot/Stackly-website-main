@@ -1794,7 +1794,6 @@
 
   .approach-container {
     gap: 40px;
-    margin-top: 60px;
   }
 
   .approach-box {
@@ -1810,9 +1809,7 @@
     font-size: 15px;
   }
 
-  .box2 {
-    margin-top: 40px;
-  }
+
 }
 @media (max-width: 768px) {
   .approach {
@@ -1955,20 +1952,18 @@
 /*manage*/
 
 @media (max-width: 768px) {
-  .managebox1 {
-    gap: 30px;
-  }
 
   .manager-box {
-    min-width: 100%;
-    flex: 0 0 100%;
+    /* min-width: 100%; */
+    /* flex: 0 0 100%; */
     align-items: center;
     text-align: center;
   }
 
   .manager-image img {
-    width: 120px;
-    height: auto;
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
   }
   .manager-topic > h2 {
     font-size: 38px;
