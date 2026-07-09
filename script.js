@@ -381,23 +381,23 @@ if (partnersSection) {
 
 // carrers Section - Card Stacking Animation //
 
-const contactSection = document.querySelector("#contact");
-const image = document.querySelector(".image");
+// const contactSection = document.querySelector("#contact");
+// const image = document.querySelector(".image");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        image.classList.add("animate");
-      } else {
-        image.classList.remove("animate"); // veliya pona remove
-      }
-    });
-  },
-  { threshold: 0.5 },
-);
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         image.classList.add("animate");
+//       } else {
+//         image.classList.remove("animate"); // veliya pona remove
+//       }
+//     });
+//   },
+//   { threshold: 0.5 },
+// );
 
-observer.observe(contactSection);
+// observer.observe(contactSection);
 
 // menu bar/////
 
